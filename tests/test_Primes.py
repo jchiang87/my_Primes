@@ -24,6 +24,14 @@ class PrimesTestCase(unittest.TestCase):
         "Test that five is prime."
         self.assertTrue(is_prime(5))
 
+    def test_one_is_not_prime(self):
+        "Test that one is not prime."
+        self.assertFalse(is_prime(1))
+
+    def test_zero_is_not_prime(self):
+        "Test that zero is not prime."
+        self.assertFalse(is_prime(0))
+
 
 if __name__ == '__main__':
     unittest.main()
