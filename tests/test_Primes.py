@@ -32,5 +32,9 @@ class PrimesTestCase(unittest.TestCase):
         "Test that zero is not prime."
         self.assertFalse(is_prime(0))
 
+    def test_neg_num_is_not_prime(self):
+        "Test that a negative number is not prime."
+        self.assertFalse(is_prime(-1))
+
 if __name__ == '__main__':
     unittest.main()
