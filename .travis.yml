@@ -12,7 +12,7 @@ services:
 
 before_script:
   - mysql -e 'show databases;'
-  - mysql -e 'create database desc;'
+  - mysql -e 'create database desc'
 
 script:
   - nosetests
