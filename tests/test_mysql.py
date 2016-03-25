@@ -1,7 +1,7 @@
 import MySQLdb
 import subprocess
 
-connection = MySQLdb.connect(db='desc', user='travis')
+connection = MySQLdb.connect(db='myapp_test', user='travis')
 cursor = connection.cursor()
 cursor.execute('create table ForcedSource if not exists (objectId BIGINT);')
 cursor.execute('insert into ForcedSource values (1),(2),(3),(4),(5);')
