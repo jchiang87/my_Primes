@@ -11,8 +11,8 @@ services:
   - mysql
 
 before_script:
-  - mysql -e 'show databases;'
   - mysql -e 'create database myapp_test;'
+  - mysql -e 'show databases;'
 
 script:
   - nosetests
