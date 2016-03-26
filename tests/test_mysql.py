@@ -10,19 +10,19 @@ def get_db_info():
     db_info = {}
     try:
         try:
-            # User's configuration:
-            my_db_info = dict(db='test', read_default_file='~/.my.cnf')
+            # Travis CI usage:
+            my_db_info = dict(db='myapp_test', user='travis')
             test = MySQLdb.connect(**my_db_info)
         except Exception, eobj:
             print eobj
-            # Travis CI usage:
-            my_db_info = dict(db='myapp_test', user='travis')
+            # User's configuration:
+            my_db_info = dict(db='test', read_default_file='~/.my.cnf')
             test = MySQLdb.connect(**my_db_info)
         test.close()
         db_info = my_db_info
     except Exception, eobj:
+        print "No database connection:"
         print eobj
-        pass
     return db_info
 
 _db_info = get_db_info()
