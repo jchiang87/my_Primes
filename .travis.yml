@@ -11,6 +11,7 @@ services:
   - mysql
 
 before_script:
+  - cat ~/.my.cnf
   - mysql -e 'create database myapp_test;'
   - mysql -e 'show databases;'
 

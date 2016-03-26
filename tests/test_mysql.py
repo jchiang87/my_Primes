@@ -11,7 +11,7 @@ def get_db_info():
     try:
         try:
             # User's configuration:
-            my_db_info = dict(read_default_file='~/.my.cnf')
+            my_db_info = dict(db='test', read_default_file='~/.my.cnf')
             test = MySQLdb.connect(**my_db_info)
         except Exception, eobj:
             print eobj
