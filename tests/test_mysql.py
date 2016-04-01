@@ -1,6 +1,8 @@
 import unittest
 import MySQLdb
 
+print "MySQLdb version:", MySQLdb.__version__
+
 def get_db_info():
     """
     Try to connect to Travis CI MySQL services or the user's via
